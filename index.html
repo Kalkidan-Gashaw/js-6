@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #dv1 {
+        width: 700px;
+        height: 400px;
+        background-color: #fff157;
+        margin-left: 50px;
+        margin-top: 50px;
+        position: relative;
+      }
+      #dv2 {
+        width: 600px;
+        height: 300px;
+        background-color: antiquewhite;
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        left: 8%;
+        border: 4px solid black;
+      }
+      h2 {
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+        font-size: 70px;
+      }
+      button {
+        padding: 5px;
+      }
+      #fl {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+      }
+      button:hover {
+        outline: 3px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dv1">
+      <div id="dv2">
+        <h2>COUNTER</h2>
+        <h1 id="num">2</h1>
+        <div id="fl">
+          <button id="btn1">Increase</button>
+          <button id="btn2">Decrease</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let number = Number(document.getElementById("num").textContent);
+      document.getElementById("btn1").onclick = function () {
+        number += 1;
+        document.getElementById("num").innerHTML = number;
+      };
+      document.getElementById("btn2").onclick = function () {
+        number -= 1;
+        document.getElementById("num").innerHTML = number;
+      };
+    </script>
+  </body>
+</html>
